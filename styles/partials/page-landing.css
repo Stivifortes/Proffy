@@ -1,8 +1,3 @@
-:root {
-    font-size: 40%;
-    /*modificar as medidas em rem*/
-}
-
 #page-landing {
     background: var(--color-primary);
 }
@@ -84,31 +79,44 @@
     margin-left: 0.8rem;
 }
 
+@media(min-width:699px) {
+     :root {
+        font-size: 40%;
+        /*modificar as medidas em rem*/
+    }
+}
+
+
+/*Para Telas acima de 1100px */
+
 @media (min-width:1100px) {
     #page-landing #conteiner {
         max-width: 1100px;
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
         grid-template-rows: 350px 1fr;
-        grid-template-areas: "proffy image image" "buttons buttons texting";
+        grid-template-areas: "proffy image image"/*Linha 1*/
+        "button button texting";
+        /*Linha 2*/
         column-gap: 87px;
         row-gap: 86px;
     }
-    .logo-container {
+    .logo-conteiner {
         grid-area: proffy;
-        align-self: center;
-        margin: 0;
         text-align: initial;
+        align-self: center;
+        /*Alinha o conteudo do grid ao centro*/
+        margin: 0;
     }
-    .logo-container img {
+    .logo-conteiner img {
         height: 127px;
     }
     .hero-image {
         grid-area: image;
         height: 350px;
     }
-    .buttons-container {
-        grid-area: buttons;
+    .buttons-conteiner {
+        grid-area: button;
         justify-content: flex-start;
         margin: 0;
     }
